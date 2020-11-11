@@ -78,7 +78,6 @@ public class NailGun : MonoBehaviour
         if(Physics.Raycast(NailOrigin.position, NailOrigin.forward, out HitInfo, Range))
         {
 
-
             //Do some hot vector math to determine how the nail should be oriented
 
             //Calculate the vector from the nail gun to the hit point

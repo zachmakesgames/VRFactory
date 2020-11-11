@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4749192632280411988}
   - component: {fileID: 8522884294961979633}
   - component: {fileID: 5882731724116726843}
+  - component: {fileID: 930296535339362081}
   m_Layer: 0
   m_Name: ToolBox
   m_TagString: Untagged
@@ -92,6 +93,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &930296535339362081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5378236001477572078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6096, y: 1.2192003, z: 1.8288004}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &866727833739469885
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5938223009577042527}
   - component: {fileID: 7333854467955822074}
   - component: {fileID: 4765901877973612848}
+  - component: {fileID: 3201901172845138557}
   m_Layer: 0
   m_Name: FloorBuildRack
   m_TagString: Untagged
@@ -80,3 +81,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3201901172845138557
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423011517760035045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 200241785485883562, guid: 6a7086ebe695c244e8063a00f66725cc, type: 3}

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5949471111810009}
+  - component: {fileID: 7023650207064190116}
   m_Layer: 0
   m_Name: Nail
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7023650207064190116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988534800208245579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d908371b586a2149810d5253c1cab2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeTime: 20
 --- !u!1001 &891329367312986749
 PrefabInstance:
   m_ObjectHideFlags: 0
