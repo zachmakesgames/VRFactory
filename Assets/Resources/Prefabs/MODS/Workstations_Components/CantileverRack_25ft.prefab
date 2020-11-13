@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7363304794300533830}
   - component: {fileID: 5872813932308710371}
   - component: {fileID: 8531113391403120425}
-  - component: {fileID: 3835346961722430454}
+  - component: {fileID: 7309464365385176070}
   m_Layer: 0
   m_Name: CantileverRack_25ft
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3835346961722430454
-BoxCollider:
+--- !u!64 &7309464365385176070
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +90,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5239999, y: 7.620002, z: 4.7752013}
-  m_Center: {x: -0.20978114, y: 0.1561009, z: -0.000001907349}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3796275692262852885, guid: f554fe8fa2b31f940856bef2e58286ec, type: 3}
