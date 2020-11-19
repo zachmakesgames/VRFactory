@@ -42,3 +42,13 @@ Sprint 1
     would work on a Powerpoint for a potential presentation on Friday. Zach is going to work
     on creating a moveable worker that holds a tool in order to demo on Friday. Nathaniel
     is going to create the sprint backlog.
+    
+  Tuesday November 17
+    There was no TA Meeting.
+    We received an new Unity folder from Linkon that contained more models and scripts.
+    We updated our Jira backlog to include what features we need to accomplish.
+    We created a new Sprint and added some of those features to it.
+    Zach or Jason will be coming to get the VR headset from Nathaniel within the next couple weeks.
+    The two will also be working together to incorporate Steam VR libraries into Unity.
+    Nathaniel will be working on creating character movement in Unity.
+    Zach will be working on the design for the user workflow.
