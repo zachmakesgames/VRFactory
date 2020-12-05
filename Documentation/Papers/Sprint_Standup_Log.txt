@@ -52,3 +52,23 @@ Sprint 1
     The two will also be working together to incorporate Steam VR libraries into Unity.
     Nathaniel will be working on creating character movement in Unity.
     Zach will be working on the design for the user workflow.
+
+  Tuesday November 24
+    Last TA Meeting for term. Nathan reminded us of Fall Term Retrospective as well as the Oral Defense Assignment.
+    Joseph brought up the Vive tracker has a potential resource that could be implemented.
+    Zach has the VR Headset working on his desktop.
+    Zach has been working on creating a workflow for the worker.
+    Jason has been working on integrating VR into the Unity project.
+    Nathaniel has been working on getting more knowledge on Unity development and character motion.
+  
+  Tuesday December 1
+    We received some resources from Linkon of projects that are similar to ours.
+    https://www.invonto.com/insights/virtual-reality-training-construction-safety-demo/
+    https://arxiv.org/ftp/arxiv/papers/1901/1901.06248.pdf
+    https://ascelibrary.org/doi/pdf/10.1061/9780784482421.010
+    Jason has continued working with VR integration.
+    Zach has continued with workflow.
+    Nathaniel started and worked on the Fall Term Retrospective. 
+    Jason and Zach are going to complete the assignment to be turned in tonight.
+    There are no roadblocks.
+    
