@@ -1,4 +1,5 @@
-Sprint 1
+  Sprint 1
+------------
   Thursday, October 15
     The group had our first meeting with our project partner.
     We were shown videos of the model factory and workers performing tasks.
@@ -42,7 +43,10 @@ Sprint 1
     would work on a Powerpoint for a potential presentation on Friday. Zach is going to work
     on creating a moveable worker that holds a tool in order to demo on Friday. Nathaniel
     is going to create the sprint backlog.
-    
+  
+  
+  Sprint 2
+------------
   Tuesday November 17
     There was no TA Meeting.
     We received an new Unity folder from Linkon that contained more models and scripts.
