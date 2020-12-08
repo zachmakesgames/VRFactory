@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class NailGun : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class NailGun : MonoBehaviour
     //The prefab to spawn at the hit location
     public GameObject NailObject;
 
+    // The action associated with controller triggers
+    public SteamVR_Action_Boolean TriggerPress;
 
     //Private Variables
 
@@ -29,45 +32,42 @@ public class NailGun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Call the TriggerPressed function when the trigger of either controller is
+        // pressed
+        TriggerPress.AddOnStateDownListener(TriggerPressed, SteamVR_Input_Sources.Any);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //If the button Fire1 is clicked and InFireDelay is false, then fire
-        if (Input.GetButtonDown("Fire1") && InFireDelay == false)
-        {
-            //Set InFireDelay to true because we just fired
-            InFireDelay = true;
 
-            //Reset the fire time
-            FireTime = 0f;
-
-            //Fire the nailgun
-            Fire();
-
-        }
-        else
-        {
-            //Otherwise check if we're still in the fire delay
-            if (InFireDelay == true)
-            {
-                //If yes and FireTime is less than FireDelay, update the FireTime
-                if (FireTime < FireDelay) 
-                { 
-                    FireTime += Time.deltaTime;
-                }
-                else
-                {
-                    //Otherwise FireTime >= FireDelay so we're not in fire delay anymore
-                    InFireDelay = false;
-
-                }
-            }
-        }
     }
 
+    void TriggerPressed(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
+    {
+        // If trigger is pressed, check if we're still in fire delay
+        if (InFireDelay)
+        {
+            // If yes and FireTime is less than FireDelay, update the FireTime
+            if (FireTime < FireDelay)
+                FireTime += Time.deltaTime;
+            // Otherwise, FireTime >= FireDelay so we're not in the fire delay anymore
+            else
+                InFireDelay = false;
+        }
+        // We're not in the fire delay, so fire
+        else
+        {
+            // Set InFireDelay to true because we just fired
+            InFireDelay = true;
+
+            // Reset the fire time
+            FireTime = 0f;
+
+            // Fire the nailgun
+            Fire();
+        }
+    }
 
     void Fire()
     {
