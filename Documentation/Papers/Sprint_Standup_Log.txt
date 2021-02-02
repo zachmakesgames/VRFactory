@@ -89,3 +89,20 @@
     enhancing the movement code.
     We will work to get VR working in the high-res factory as well.
     
+  Sprint 4
+------------
+  Monday January 25
+    Nothing new to report. 
+    Development continued with no immediate troubles.
+    
+  Friday January 29
+    The group gave a presentation on the current status of the project. This included any changes
+    were made to the initial vision and scope of the project, what has been accomplished, and what
+    the future of the project.
+    Completion of the updated Milestone 2 document was also completed, creating the basis for the 
+    upcoming alpha assignment.
+    Integration of VR was completed, along with movement and object interaction with the VR hardware.
+    
+  Monday February 1
+    Nothing new to report.
+    
