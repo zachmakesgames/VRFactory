@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using System;
 
 public class TouchController : MonoBehaviour
 {
@@ -51,18 +52,20 @@ public class TouchController : MonoBehaviour
     
     void Rotate()
     {
-        // Store the current position and rotation of the camera rig so they can
-        // be restored after rotating the character; this will rotate the character
-        // without rotating the camera rig
-        Vector3 oldPos = CameraRig.position;
-        Quaternion oldRotation = CameraRig.rotation;
+ 
+            // Store the current position and rotation of the camera rig so they can
+            // be restored after rotating the character; this will rotate the character
+            // without rotating the camera rig
+            Vector3 oldPos = CameraRig.position;
+            Quaternion oldRotation = CameraRig.rotation;
 
-        // Rotate the character
-        transform.eulerAngles = new Vector3(0.0f, CharacterHead.rotation.eulerAngles.y, 0.0f);
+            // Rotate the character
+            transform.eulerAngles = new Vector3(0.0f, CharacterHead.rotation.eulerAngles.y, 0.0f);
 
-        // Restore the position and rotation of the camera rig
-        CameraRig.position = oldPos;
-        CameraRig.rotation = oldRotation;
+            // Restore the position and rotation of the camera rig
+            CameraRig.position = oldPos;
+            CameraRig.rotation = oldRotation;
+   
     }
 
     void Move()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class NailGun : MonoBehaviour
 {
@@ -29,22 +30,35 @@ public class NailGun : MonoBehaviour
     //Is the nail gun delaying until the next fire?
     bool InFireDelay;
 
+
+    private Interactable interactable;
+
     // Start is called before the first frame update
     void Start()
     {
         // Call the TriggerPressed function when the trigger of either controller is
         // pressed
         TriggerPress.AddOnStateDownListener(TriggerPressed, SteamVR_Input_Sources.Any);
+        interactable = GetComponent<Interactable>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(interactable.attachedToHand != null)
+        {
+            SteamVR_Input_Sources source = interactable.attachedToHand.handType;
+            if (TriggerPress[source].stateDown)
+            {
+                Fire();
+            }
+        }
     }
 
     void TriggerPressed(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
     {
+
+        Debug.Log("Nail gun trigger pulled");
         // If trigger is pressed, check if we're still in fire delay
         if (InFireDelay)
         {
@@ -77,7 +91,7 @@ public class NailGun : MonoBehaviour
         //Check if we hit something
         if(Physics.Raycast(NailOrigin.position, NailOrigin.forward, out HitInfo, Range))
         {
-
+            Debug.Log("Nail would hit something");
             //Do some hot vector math to determine how the nail should be oriented
 
             //Calculate the vector from the nail gun to the hit point
@@ -91,6 +105,10 @@ public class NailGun : MonoBehaviour
 
             //Now we can spawn the nail at the hit point and set the rotation to match the angle it was fired from
             Instantiate(NailObject, HitInfo.point, Quaternion.AngleAxis(Angle, Axis));
+        }
+        else
+        {
+            Debug.Log("Nail would not hit something");
         }
     }
 }
