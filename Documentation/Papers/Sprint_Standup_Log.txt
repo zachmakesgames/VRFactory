@@ -100,9 +100,28 @@
     were made to the initial vision and scope of the project, what has been accomplished, and what
     the future of the project.
     Completion of the updated Milestone 2 document was also completed, creating the basis for the 
-    upcoming alpha assignment.
+    upcoming alpha functionality assignment.
     Integration of VR was completed, along with movement and object interaction with the VR hardware.
     
   Monday February 1
     Nothing new to report.
+  
+  Friday February 5
+    Had meeting with Linkon and Joseph and further finalized the scope of the project.
+    The user should be able to assemble a floor in sequential steps.
+        1. Assemble the floor frame
+        2. Attach joist hangers
+        3. Lay down joists
+        4. Nail in joists
+    Each step should be accompanied with ghosted positions of the materials.
+    A fast forward ability where the user only has to do a certain percent of each step until the 
+    step is auto completed could be implemented. 
+    During standup meeting we went over what would be needed in order to accomplish above goals.
+    Nathaniel will work on the in world tutorial system.
+    Jason will work on being able to pick up the materials.
+    Zach will work on the different prefabs to enable ghosting.
     
+Monday February 8
+    Had meeting with Nathan.
+    We went over what the group has accomplished since our last meeting. 
+    Discussed alpha and beta functionality assignments.
