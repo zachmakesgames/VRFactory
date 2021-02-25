@@ -32,6 +32,7 @@ public class FloorStation_SideRunner : MonoBehaviour
     public void Enable()
     {
         this.IsEnabled = true;
+        this.SetState(FloorStationHelper.SubpartState.Ghost);
     }
 
     public void Disable()

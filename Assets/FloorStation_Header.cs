@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JoistScript : MonoBehaviour
+public class FloorStation_Header : MonoBehaviour
 {
-
-    public string BuildItemTag;
-
-
     public FloorStationHelper.SubpartState CurrentState = FloorStationHelper.SubpartState.Hidden;
     public GameObject Object;
 
@@ -19,14 +15,17 @@ public class JoistScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Hide the object
         this.SetState(this.CurrentState);
-        this.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.IsEnabled)
+        {
+            //check for updates
+        }
     }
 
     public void Enable()
@@ -38,20 +37,6 @@ public class JoistScript : MonoBehaviour
     public void Disable()
     {
         this.IsEnabled = true;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-
-        if (this.IsEnabled)
-        {
-            if (other.gameObject.tag == BuildItemTag && this.CurrentState != FloorStationHelper.SubpartState.Placed)
-            {
-                Debug.Log("The build item has entered the trigger");
-                this.SetState(FloorStationHelper.SubpartState.Placed);
-                Destroy(other.gameObject);
-            }
-        }
     }
 
     public void SetState(FloorStationHelper.SubpartState newState)
@@ -78,22 +63,22 @@ public class JoistScript : MonoBehaviour
 
     private void MakeHidden()
     {
-        this.gameObject.SetActive(false);
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        this.Object.SetActive(false);
+        this.Object.GetComponent<BoxCollider>().enabled = false;
     }
 
     private void MakeGhost()
     {
-        this.gameObject.SetActive(true);
-        this.gameObject.GetComponent<MeshRenderer>().material = GhostMaterial;
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        this.Object.SetActive(true);
+        this.Object.GetComponent<MeshRenderer>().material = GhostMaterial;
+        this.Object.GetComponent<BoxCollider>().enabled = false;
     }
 
     private void MakeSolid()
     {
-        this.gameObject.SetActive(true);
-        this.gameObject.GetComponent<MeshRenderer>().material = SolidMaterial;
-        this.gameObject.GetComponent<BoxCollider>().enabled = true;
+        this.Object.SetActive(true);
+        this.Object.GetComponent<MeshRenderer>().material = SolidMaterial;
+        this.Object.GetComponent<BoxCollider>().enabled = true;
     }
 
     public bool GetCompleted()

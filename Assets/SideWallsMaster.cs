@@ -27,7 +27,7 @@ public class SideWallsMaster : MonoBehaviour
             foreach(GameObject g in this.WallObjects)
             {
                 //Get the script that controls the side walls
-                FloorStation_SideRunner wallscript = g.GetComponent<FloorStation_SideRunner>();
+                ComponentScript wallscript = g.GetComponent<ComponentScript>();
 
                 //Check if the wall is completed and if so add it to the completed list
                 if (wallscript.GetCompleted())
@@ -60,7 +60,7 @@ public class SideWallsMaster : MonoBehaviour
         foreach (GameObject g in this.WallObjects)
         {
             //Get the script that controls the side walls
-            FloorStation_SideRunner wallscript = g.GetComponent<FloorStation_SideRunner>();
+            ComponentScript wallscript = g.GetComponent<ComponentScript>();
             wallscript.Enable();
         }
     }
@@ -73,7 +73,7 @@ public class SideWallsMaster : MonoBehaviour
         foreach (GameObject g in this.WallObjects)
         {
             //Get the script that controls the side walls
-            FloorStation_SideRunner wallscript = g.GetComponent<FloorStation_SideRunner>();
+            ComponentScript wallscript = g.GetComponent<ComponentScript>();
             wallscript.Disable();
         }
     }

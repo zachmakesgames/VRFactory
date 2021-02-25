@@ -22,7 +22,9 @@ public class BuildTriggerScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == BuildItemTag)
+        Debug.Log("Something hit the trigger!");
+        Debug.Log("Objects tag: " + other.gameObject.tag);
+        if (other.gameObject.tag == BuildItemTag)
         {
             Debug.Log("The build item has entered the trigger");
         }

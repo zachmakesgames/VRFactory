@@ -2,63 +2,80 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JoistScript : MonoBehaviour
+public class ComponentScript : MonoBehaviour
 {
+ 
 
     public string BuildItemTag;
 
 
     public FloorStationHelper.SubpartState CurrentState = FloorStationHelper.SubpartState.Hidden;
-    public GameObject Object;
+    
 
     public Material SolidMaterial;
     public Material GhostMaterial;
 
+    public bool EnableOnStart = false;
+
     private bool IsEnabled = false;
+
+   
 
     // Start is called before the first frame update
     void Start()
     {
         this.SetState(this.CurrentState);
-        this.Enable();
+
+        if (this.EnableOnStart)
+        {
+            this.Enable();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Enable()
     {
         this.IsEnabled = true;
-        this.SetState(FloorStationHelper.SubpartState.Ghost);
+        if (this.CurrentState == FloorStationHelper.SubpartState.Hidden)
+        {
+            this.SetState(FloorStationHelper.SubpartState.Ghost);
+        }
     }
 
     public void Disable()
     {
-        this.IsEnabled = true;
+        this.IsEnabled = false;
+        if (this.CurrentState != FloorStationHelper.SubpartState.Placed)
+        {
+            this.SetState(FloorStationHelper.SubpartState.Hidden);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
     {
-
+        //Debug.Log("----OnTriggerEnter----");
         if (this.IsEnabled)
         {
+            //Debug.Log("----ObjectIsEnabled----");
             if (other.gameObject.tag == BuildItemTag && this.CurrentState != FloorStationHelper.SubpartState.Placed)
             {
-                Debug.Log("The build item has entered the trigger");
+                //Debug.Log("The build item has entered the trigger");
                 this.SetState(FloorStationHelper.SubpartState.Placed);
                 Destroy(other.gameObject);
             }
         }
+
     }
 
     public void SetState(FloorStationHelper.SubpartState newState)
     {
 
-        if (this.IsEnabled)
-        {
+   
             this.CurrentState = newState;
 
             switch (newState)
@@ -73,8 +90,10 @@ public class JoistScript : MonoBehaviour
                     this.MakeSolid();
                     break;
             }
-        }
+        
     }
+
+  
 
     private void MakeHidden()
     {
@@ -103,5 +122,12 @@ public class JoistScript : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void MakeComplete()
+    {
+        Debug.Log("Making component complete");
+        this.SetState(FloorStationHelper.SubpartState.Placed);
+        this.Disable();
     }
 }

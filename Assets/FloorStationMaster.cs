@@ -11,8 +11,8 @@ public class FloorStationMaster : MonoBehaviour
 
 
     private SideWallsMaster SWMScript;// = SideWallsMasterObject.GetComponent<SideWallsMaster>();
-                                      //private HeadersMaster HMScript;// = HeadersMasterObject.GetComponent<HeadersMaster>();
-                                      //private JoistsMaster JMScript;// = JoistsMasterObject.GetComponent<JoistsMaster>();
+    private HeadersMaster HMScript;// = HeadersMasterObject.GetComponent<HeadersMaster>();
+    private JoistsMaster JMScript;// = JoistsMasterObject.GetComponent<JoistsMaster>();
 
     private int CurrentStage = 0;
     //0 == SideWalls
@@ -28,6 +28,8 @@ public class FloorStationMaster : MonoBehaviour
     void Start()
     {
         SWMScript = SideWallsMasterObject.GetComponent<SideWallsMaster>();
+        HMScript = HeadersMasterObject.GetComponent<HeadersMaster>();
+        JMScript = JoistsMasterObject.GetComponent<JoistsMaster>();
 
         this.ActivateCurrentStage();
     }
@@ -35,7 +37,10 @@ public class FloorStationMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!this.IsComplete)
+        {
+            this.CheckCurrentStage();
+        }
     }
 
     public bool GetCompleted()
@@ -49,6 +54,12 @@ public class FloorStationMaster : MonoBehaviour
         {
             case 0: SWMScript.Enable();
                 break;
+            case 1: HMScript.Enable();
+                break;
+            case 2: JMScript.Enable(); 
+                break;
+            case 3: this.IsComplete = true;
+                break;
         }
     }
 
@@ -57,6 +68,10 @@ public class FloorStationMaster : MonoBehaviour
         switch (this.CurrentStage)
         {
             case 0: this.CheckSideWalls();
+                break;
+            case 1: this.CheckHeaders();
+                break;
+            case 2: this.CheckJoists();
                 break;
         }
     }
@@ -68,6 +83,26 @@ public class FloorStationMaster : MonoBehaviour
             SWMScript.Disable();
             this.CurrentStage += 1;
 
+            this.ActivateCurrentStage();
+        }
+    }
+
+    private void CheckHeaders()
+    {
+        if (HMScript.GetCompleted())
+        {
+            HMScript.Disable();
+            this.CurrentStage += 1;
+            this.ActivateCurrentStage();
+        }
+    }
+
+    private void CheckJoists()
+    {
+        if (JMScript.GetCompleted())
+        {
+            JMScript.Disable();
+            this.CurrentStage += 1;
             this.ActivateCurrentStage();
         }
     }
