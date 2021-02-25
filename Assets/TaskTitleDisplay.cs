@@ -7,8 +7,15 @@ public class TaskTitleDisplay : MonoBehaviour
 {
     public Text taskTitleText;
 
+    private string[] taskTitles = { 
+        "Place Band Boards",
+        "Place Joist Hangers",
+        "Place Joists",
+        "Secure Joists"
+    };
+
     private void Update()
     {
-        taskTitleText.text = "Testing";
+        taskTitleText.text = taskTitles[0];
     }
 }
