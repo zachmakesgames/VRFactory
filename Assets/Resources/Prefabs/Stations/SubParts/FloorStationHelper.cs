@@ -5,4 +5,7 @@ using UnityEngine;
 public class FloorStationHelper : MonoBehaviour
 {
     public enum SubpartState { Hidden, Ghost, Placed };
+    public enum FloorStationState { SideWalls, Headers, JoistHangers, Joists, FloorBoards };
 }
+
+
