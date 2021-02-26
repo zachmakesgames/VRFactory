@@ -14,8 +14,11 @@ public class TaskTitleDisplay : MonoBehaviour
         "Secure Joists"
     };
 
+    private int prefab = 0;
+
     private void Update()
     {
-        taskTitleText.text = taskTitles[0];
+        
+        taskTitleText.text = taskTitles[prefab];
     }
 }

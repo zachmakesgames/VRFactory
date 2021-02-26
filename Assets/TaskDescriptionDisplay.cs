@@ -19,8 +19,10 @@ public class TaskDescriptionDisplay : MonoBehaviour
 
         "- Nail the joists to the joist hangers."
     };
+
+    private int prefab = 0;
     void Update()
     {
-        TaskDescriptionText.text = TaskDescriptions[2];
+        TaskDescriptionText.text = TaskDescriptions[prefab];
     }
 }
