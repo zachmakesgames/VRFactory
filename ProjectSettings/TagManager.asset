@@ -7,6 +7,10 @@ TagManager:
   - projectile
   - FxTemporaire
   - BuildTest
+  - FloorJoist
+  - BandBoard
+  - JoistHanger
+  - RimJoist
   layers:
   - Default
   - TransparentFX
