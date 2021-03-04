@@ -106,7 +106,7 @@
   Monday February 1
     Nothing new to report.
   
-  Friday February 5
+  Thursday February 4
     Had meeting with Linkon and Joseph and further finalized the scope of the project.
     The user should be able to assemble a floor in sequential steps.
         1. Assemble the floor frame
@@ -121,7 +121,34 @@
     Jason will work on being able to pick up the materials.
     Zach will work on the different prefabs to enable ghosting.
     
-Monday February 8
+  Monday February 8
     Had meeting with Nathan.
     We went over what the group has accomplished since our last meeting. 
     Discussed alpha and beta functionality assignments.
+    We will continue to have meetings only once per sprint.
+    
+  Thursday February 11
+    We began completion of the Alpha Functionality document.
+    As per our last meeting with Linkon and Joseph, we adjusted our functional requirements to focus 
+    on the user's ability to complete a task given instructions.
+    
+  Sprint 5
+------------
+  Thursday February 18
+    Meeting with Linkon cancelled.
+    
+  Thursday February 25
+    Zach has the prefabs in order to enable ghosting of materials completed. Demoed to Linkon and Joseph.
+    Nathaniel has the UI skeleton created. Once the UI is linked to the prefabs then it should be complete.
+    Jason is continuing work on object interaction.
+    Created plan to merge individual components after Monday's meeting with Nathan.
+    
+  Monday March 1
+    We had meeting with Nathan and went over what to expect for end of term.
+    We will have Beta Functionality video due this weekend.
+    There will be a Winter Retrospective document focusing on what we would do differently if we were
+    to start this project over again.
+    This term the individual defenses have been substituted for team defenses that will take place during 
+    week 10 and finals week. (sign ups to come)
+    Reminder that virtual expo will be June 4th.
+    We began the process of joining our individual components of the project together.
