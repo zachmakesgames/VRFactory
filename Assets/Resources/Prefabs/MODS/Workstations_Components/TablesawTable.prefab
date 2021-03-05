@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4671851692054353621}
   - component: {fileID: 8609224191033088368}
   - component: {fileID: 5809340604528389562}
+  - component: {fileID: 5796289544407821077}
   m_Layer: 0
   m_Name: TablesawTable
   m_TagString: Untagged
@@ -80,6 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5796289544407821077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448811222655126639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.8768, y: 2.0509286, z: 0.7232912}
+  m_Center: {x: 0.00842309, y: 0.07509118, z: -0.2893146}
 --- !u!1001 &3109576341198924942
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - projectile
+  - FxTemporaire
+  - BuildTest
+  - FloorJoist
+  - BandBoard
+  - JoistHanger
+  - RimJoist
   layers:
   - Default
   - TransparentFX
