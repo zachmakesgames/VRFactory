@@ -63,6 +63,11 @@ public class FloorStationMaster : MonoBehaviour
         }
     }
 
+    public int GetCurrentStage()
+    {
+        return this.CurrentStage;
+    }
+
     private void CheckCurrentStage()
     {
         switch (this.CurrentStage)

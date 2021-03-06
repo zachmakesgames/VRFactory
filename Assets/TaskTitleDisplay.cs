@@ -7,6 +7,10 @@ public class TaskTitleDisplay : MonoBehaviour
 {
     public Text taskTitleText;
 
+    public GameObject FloorStationPrefab;
+
+    private FloorStationMaster FloorStationScript = null;
+
     private string[] taskTitles = { 
         "Place Band Boards",
         "Place Joist Hangers",
@@ -16,9 +20,18 @@ public class TaskTitleDisplay : MonoBehaviour
 
     private int prefab = 0;
 
+    void Start()
+    {
+        if (FloorStationPrefab !=  null)
+        {
+            this.FloorStationScript = FloorStationPrefab.GetComponent<FloorStationMaster>();
+            
+        }
+    }
+
     private void Update()
     {
-        
-        taskTitleText.text = taskTitles[prefab];
+        int currentStage = this.FloorStationScript.GetCurrentStage();
+        taskTitleText.text = taskTitles[currentStage];
     }
 }
