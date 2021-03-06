@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d6922f0fb010e4591924376d21dd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildItemTag: BuildTest
+  BuildItemTag: FloorJoist
   CurrentState: 0
   SolidMaterial: {fileID: 2100000, guid: 7733e31b437b3514c80571625d549f9c, type: 2}
   GhostMaterial: {fileID: 2100000, guid: 44ea61e1a1f6757418cda71ece5ae491, type: 2}
@@ -183,6 +183,11 @@ PrefabInstance:
       propertyPath: GhostMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 44ea61e1a1f6757418cda71ece5ae491, type: 2}
+    - target: {fileID: 4803207803286227431, guid: 3b910685a8ae86d478f003aa89dabaf9,
+        type: 3}
+      propertyPath: BuildItemTag
+      value: JoistHanger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b910685a8ae86d478f003aa89dabaf9, type: 3}
 --- !u!1 &1799066383086852264 stripped
@@ -360,6 +365,11 @@ PrefabInstance:
       propertyPath: GhostMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 44ea61e1a1f6757418cda71ece5ae491, type: 2}
+    - target: {fileID: 4803207803286227431, guid: 3b910685a8ae86d478f003aa89dabaf9,
+        type: 3}
+      propertyPath: BuildItemTag
+      value: JoistHanger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b910685a8ae86d478f003aa89dabaf9, type: 3}
 --- !u!1 &3461801279074915786 stripped
