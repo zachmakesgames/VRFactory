@@ -13,16 +13,28 @@ public class TaskDescriptionDisplay : MonoBehaviour
         "- Repeat the same thing for the 2nd band board.",
 
         "- Pick up joist hangers and start installing them one by one by nailing them to the band board.",
-
+        
         "- Pick up a joist from the board storage area.\n" +
-        "- Start with one end (rim joist) and continue with the floor joists.",
-
-        "- Nail the joists to the joist hangers."
+        "- Start with one end (rim joist) and continue with the floor joists\n" +
+        "- Lay joists on joist hangers and secure to joist hanger."
     };
 
-    private int prefab = 0;
+    public GameObject FloorStationPrefab;
+
+    private FloorStationMaster FloorStationScript = null;
+
+    void Start()
+    {
+        if (FloorStationPrefab !=  null)
+        {
+            this.FloorStationScript = FloorStationPrefab.GetComponent<FloorStationMaster>();
+            
+        }
+    }
+
     void Update()
     {
-        TaskDescriptionText.text = TaskDescriptions[prefab];
+        int currentStage = this.FloorStationScript.GetCurrentStage();
+        TaskDescriptionText.text = TaskDescriptions[currentStage];
     }
 }

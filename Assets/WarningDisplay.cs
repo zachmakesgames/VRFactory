@@ -7,12 +7,24 @@ public class WarningDisplay : MonoBehaviour
 {
     public Text WarningText;
 
-    private int prefab = 0;
+    public GameObject FloorStationPrefab;
+
+    private FloorStationMaster FloorStationScript = null;
+
+    void Start()
+    {
+        if (FloorStationPrefab !=  null)
+        {
+            this.FloorStationScript = FloorStationPrefab.GetComponent<FloorStationMaster>();
+            
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(prefab == 0)
+        int currentStage = this.FloorStationScript.GetCurrentStage();
+        if(currentStage != 2) // Not equal to joist hangers ie anything else
         {
             WarningText.text = "This should be a two person carry.";
         }

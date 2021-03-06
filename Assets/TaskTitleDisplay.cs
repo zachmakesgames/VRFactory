@@ -11,14 +11,18 @@ public class TaskTitleDisplay : MonoBehaviour
 
     private FloorStationMaster FloorStationScript = null;
 
+    /*
+        0 = band boards
+        1 = rim joists
+        2 = joist hangers
+        3 = joistboards 
+    */
+
     private string[] taskTitles = { 
         "Place Band Boards",
         "Place Joist Hangers",
-        "Place Joists",
-        "Secure Joists"
+        "Place Joists"
     };
-
-    private int prefab = 0;
 
     void Start()
     {
