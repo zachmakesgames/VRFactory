@@ -152,3 +152,45 @@
     week 10 and finals week. (sign ups to come)
     Reminder that virtual expo will be June 4th.
     We began the process of joining our individual components of the project together.
+    
+  Thursday March 4
+    We had our meeting with Linkon.
+    We finalized the merging of our individual contributions to the project and started working on the script
+    and slides for our Beta Functionality presentation.
+  
+  Saturday March 6
+    We completed our Beta Functionality video which highlighted the progress that we have made thus far.
+    
+  Wednesday March 10
+    The team defenses have been substituted with a peer review which has been distributed today.
+    
+  Thursday March 11
+    Our meeting with Linkon and Dr Louis was cancelled.
+    
+  Monday March 15
+    We finished our Winter Term Retrospective document.
+    
+  Thursday March 18
+    We had a small update meeting with Dr. Louis to see how the term was wrapping up.
+    
+  Sprint 6
+------------
+  Monday April 5
+    We had a meeting with Dr Louis to discuss the project trajectory for the future.
+    We discussed what changes need to be made with the project including bug fixes and altering of task 
+    completion to match the task operations Dr Louis would like.
+    
+  Monday April 12
+    Jason created a document that detailed what needed to be done with the project as well as a schedule of
+    when the tasks might be completed.
+    We had a short update meeting with Dr Louis and Linkon.
+    
+  Tuesday April 13
+    We had a beginning of term (there was some miscommunication and scheduling errors that resulted in the group
+    missing the first meeting) with Nathan.
+    He pointed our attention to what the term was going to look like.
+    There is a portfolio update assignment where we submit our updated portfolio with our project included.
+    We have a project showcase individual assignment due April 30th where we practice describing our project to three
+    different groups: highly technical, general audience, and 5th graders.
+    Our Code Freeze has been named Code and Repo Grading and takes place during week 7 (May 10-14).
+    He reminded us to keep a log of the project for when our code and documentation is graded.
