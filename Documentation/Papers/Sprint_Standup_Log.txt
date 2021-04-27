@@ -194,3 +194,15 @@
     different groups: highly technical, general audience, and 5th graders.
     Our Code Freeze has been named Code and Repo Grading and takes place during week 7 (May 10-14).
     He reminded us to keep a log of the project for when our code and documentation is graded.
+    
+  Monday April 19
+    Short check in meeting with Linkon and Dr Louis to see if there were any problems. We let them know that we are
+    continuing to work on bux fixes. 
+  
+  Tuesday April 20
+    We had short check in meeting with Nathan to get our group in the same meeting rotation as the rest of the teams.
+    
+  Monday April 26
+    Short check in meeting with Linkon. We let him know that Zach has updated the build order to facilitate all joist 
+    hangers being placed before the joists are placed, rather than alternating between the two. We will continue to 
+    work on bug fixes.
