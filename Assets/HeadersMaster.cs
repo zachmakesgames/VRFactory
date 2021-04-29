@@ -77,4 +77,15 @@ public class HeadersMaster : MonoBehaviour
             headerscript.Disable();
         }
     }
+
+    public void MakeComplete()
+    {
+        foreach (GameObject g in this.HeaderObjects)
+        {
+            ComponentScript headerscript = g.GetComponent<ComponentScript>();
+            headerscript.MakeComplete();
+        }
+
+        this.IsComplete = true;
+    }
 }

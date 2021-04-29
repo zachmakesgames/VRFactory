@@ -26,10 +26,11 @@ public class JoistsMaster : MonoBehaviour
             //Debug.Log("Child name: " + this.transform.GetChild(i).transform.name);
         }
 
-        this.JoistCount = JoistObjects.Count;
+        /*this.JoistCount = JoistObjects.Count;
         Debug.Log("Joist controller has " + this.JoistCount.ToString() + " joists");
         this.CurrentJoist = this.JoistObjects[this.CurrentJoistIndex];
         FloorStation_Joist joistscript = this.CurrentJoist.GetComponent<FloorStation_Joist>();
+        */
     }
 
     // Update is called once per frame
@@ -37,38 +38,27 @@ public class JoistsMaster : MonoBehaviour
     {
         if (this.IsEnabled)
         {
-            
-            if(this.CurrentJoistIndex < this.JoistCount)
-            {
-                //Auto complete the joists if enough of them are already built
-                if (this.AutoCompleteCount > 0 && this.CurrentJoistIndex >= this.AutoCompleteCount)
-                {
-                    Debug.Log("Auto completing joists");
-                    foreach (GameObject g in this.JoistObjects)
-                    {
-                        FloorStation_Joist s = g.GetComponent<FloorStation_Joist>();
-                        s.MakeComplete();
-                    }
 
-                    this.IsComplete = true;
-                    this.Disable();
-                }
-                else
+            int completed_count = 0;
+
+            foreach (GameObject g in this.JoistObjects)
+            {
+                ComponentScript joistscript = g.GetComponent<ComponentScript>();
+                if (joistscript != null)
                 {
-                    FloorStation_Joist s = CurrentJoist.GetComponent<FloorStation_Joist>();
-                    if (s.GetCompleted())   ////NULL ref exception
+                    if (joistscript.GetCompleted())
                     {
-                        s.Disable();
-                        this.CurrentJoist = JoistObjects[++this.CurrentJoistIndex];
-                        FloorStation_Joist snew = CurrentJoist.GetComponent<FloorStation_Joist>();
-                        snew.Enable();
+                        ++completed_count;
+                        if (completed_count >= this.AutoCompleteCount)
+                        {
+                            Debug.Log("JoistMaster has acheived auto_complete count and is now complete");
+                            this.IsComplete = true;
+                            this.MakeComplete();
+                            break;
+
+                        }
                     }
                 }
-            }
-            else
-            {
-                this.IsComplete = true;
-                this.Disable();
             }
         }
     }
@@ -82,9 +72,11 @@ public class JoistsMaster : MonoBehaviour
     {
         this.IsEnabled = true;
 
-        //Enable the current joist
-        FloorStation_Joist joistscript = this.CurrentJoist.GetComponent<FloorStation_Joist>();
-        joistscript.Enable(); ////NULL ref exception
+        foreach(GameObject g in this.JoistObjects)
+        {
+            ComponentScript joistscript = g.GetComponent<ComponentScript>();
+            joistscript.Enable();
+        }
     }
 
     public void Disable()
@@ -101,5 +93,18 @@ public class JoistsMaster : MonoBehaviour
                 joistscript.Disable();
             }
         }
+    }
+
+    public void MakeComplete()
+    {
+        foreach (GameObject go in this.JoistObjects)
+        {
+            ComponentScript joistscript = go.GetComponent<ComponentScript>();
+            if (joistscript != null)
+            {
+                joistscript.MakeComplete();
+            }
+        }
+        this.IsComplete = true;
     }
 }

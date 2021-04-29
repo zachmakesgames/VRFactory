@@ -77,4 +77,15 @@ public class SideWallsMaster : MonoBehaviour
             wallscript.Disable();
         }
     }
+
+    public void MakeComplete()
+    {
+        foreach(GameObject g in this.WallObjects)
+        {
+            ComponentScript wallscript = g.GetComponent<ComponentScript>();
+            wallscript.MakeComplete();
+        }
+
+        this.IsComplete = true;
+    }
 }
