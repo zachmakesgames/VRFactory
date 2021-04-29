@@ -21,7 +21,7 @@ public class TaskTitleDisplay : MonoBehaviour
     private string[] taskTitles = { 
         "Place Band Boards",
         "Place Rim Joists",
-        "Place Joist Hangers/Joists",
+        "Place Joist Hangers",
         "Place Joists"
     };
 
