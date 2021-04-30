@@ -24,7 +24,6 @@ public class WarningDisplay : MonoBehaviour
     void Update()
     {
         int currentStage = this.FloorStationScript.GetCurrentStage();
-        currentStage = 3;
         if(currentStage != 2) // Not equal to joist hangers ie anything else
         {
             WarningText.text = "This should be a two person carry.";
