@@ -16,10 +16,24 @@ The goal of this project is to create a virtual reality training tool to be used
 The project focuses on the floor building station of the factory. Here, workers are tasked with assembling the floor pieces that will be in the houses. The workers will begin with creating the frame with a combination of band boards and rim joists. Once the frame is completed, the worker will then attach joist hangers along the inside of the rim joists. After all the rim joists are attached to the rim joists, the worker can then lay the joists into the joist hangers and attach them.
 
 ## Requirements
-### Hardware Requirements
-### System Requirements
+### Hardware
+**Note: Developed with HTC Vive Pro**
+- **OS**: Windows 7 SP1, Windows 8.1 or later, Windows 10
+- **Processor**: Intel Core i5-4590/AMD FX 8350 equivalent or better
+- **Memory**: 4 GB RAM
+- **Graphics**: NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better
+  -  Recommended: NVIDIA GeForce GTX 1060, AMD Radeon RX 480 equivalent or better
+### Software
 - **Unity**: 2019.4.12f1 
+- **Unity Hub**
+- **SteamVR**
 
 ## Instructions
-### Building Unity Project
+### Importing Unity project
+1. Download project repository
+2. Open Unity Hub
+3. Click "Add" and select the repository's folder
+4. Check that the "Unity Version" is 2019.4.12f1
+5. Click on the project to open it in Unity
+### Building completed project
 ### Running the Executable
