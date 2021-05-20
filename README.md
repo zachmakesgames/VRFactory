@@ -24,7 +24,7 @@ The project focuses on the floor building station of the factory. Here, workers 
 - **Graphics**: NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better
   -  Recommended: NVIDIA GeForce GTX 1060, AMD Radeon RX 480 equivalent or better
 ### Software
-- **Unity**: 2019.4.12f1 
+- **Unity**: 2019.4.12f1    _Warning: newer versions may cause build issues_
 - **Unity Hub**
 - **SteamVR**
 
