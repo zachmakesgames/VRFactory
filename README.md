@@ -36,4 +36,15 @@ The project focuses on the floor building station of the factory. Here, workers 
 4. Check that the "Unity Version" is 2019.4.12f1
 5. Click on the project to open it in Unity
 ### Building completed project
+1. Open the unity project file
+2. Open the build settings menu by clicking File>Build Settings
+3. Click 'Add Open Scenes' to add the scene to the build
+4. Select the target platform
+5. Select the architecture
+6. Make sure all build settings are correct
+7. Click 'Build'
+8. A prompt will then ask you where to place the completed build
 ### Running the Executable
+1. Open the folder selected during the build process
+2. Ensure your VR headset is plugged in
+3. Run the file called MODS-VR.exe
