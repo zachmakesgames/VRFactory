@@ -59,15 +59,21 @@ public class ComponentScript : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         //Debug.Log("----OnTriggerEnter----");
+        //Debug.Log("----BuildItemTag: " + BuildItemTag + "----");
         if (this.IsEnabled)
         {
             //Debug.Log("----ObjectIsEnabled----");
+            //Debug.Log("Expecting to receive item tag: " + BuildItemTag + ". Received: " + other.gameObject.tag);
             if (other.gameObject.tag == BuildItemTag && this.CurrentState != FloorStationHelper.SubpartState.Placed)
             {
                 //Debug.Log("The build item has entered the trigger");
                 this.SetState(FloorStationHelper.SubpartState.Placed);
                 Destroy(other.gameObject);
             }
+        }
+        else
+        {
+            //Debug.Log("----OBJECT DISABLED----");
         }
 
     }

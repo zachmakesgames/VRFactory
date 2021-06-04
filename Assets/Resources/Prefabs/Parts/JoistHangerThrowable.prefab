@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4758534452474809842}
   - component: {fileID: 8477584613436752471}
   - component: {fileID: 5927468301078230685}
-  - component: {fileID: 1948264533000258872}
   - component: {fileID: 5021169460269545361}
   - component: {fileID: 1181868036028428333}
   - component: {fileID: 4205997609741678882}
   - component: {fileID: 594142148661478800}
+  - component: {fileID: 2699033553991832911}
   m_Layer: 0
   m_Name: JoistHangerThrowable
   m_TagString: JoistHanger
@@ -84,23 +84,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1948264533000258872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5278893261879531336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d6922f0fb010e4591924376d21dd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BuildItemTag: BuildTest
-  CurrentState: 0
-  SolidMaterial: {fileID: 2100000, guid: 1bb91007256294e4f84e5f3f499ceef1, type: 2}
-  GhostMaterial: {fileID: 0}
-  EnableOnStart: 0
 --- !u!65 &5021169460269545361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -236,3 +219,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!65 &2699033553991832911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278893261879531336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01906683, y: 0.024271833, z: 0.021257104}
+  m_Center: {x: 0.005204339, y: 2.0492656e-10, z: 0.010270906}

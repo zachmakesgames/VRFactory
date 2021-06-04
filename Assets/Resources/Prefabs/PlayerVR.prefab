@@ -1730,8 +1730,8 @@ GameObject:
   - component: {fileID: 2282875202536670962}
   - component: {fileID: 2282875202525669374}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: PlayerVR
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
